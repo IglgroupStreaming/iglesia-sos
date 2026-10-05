@@ -1,0 +1,26 @@
+{
+  "name": "Iglesia S.O.S",
+  "short_name": "Iglesia SOS",
+  "description": "Emergencias y contactos del Hospital Dr. Tomás Perón, Iglesia, San Juan",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1b2a",
+  "theme_color": "#1E5FA8",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1E5FA8">
+<meta name="description" content="Iglesia S.O.S - Emergencias Hospital Dr. Tomás Perón, San Juan">
+<title>Iglesia S.O.S</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #0d1b2a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 110px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 10px 0 4px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    color: #9ec3e8;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+    border: 3px solid #1E5FA8;
+    background: #fff;
+    padding: 6px;
+  }
+  .buttons {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  a.call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: #1E5FA8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    border: none;
+    transition: transform 0.1s, background 0.2s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+  a.call-btn:active { transform: scale(0.97); background: #164a85; }
+  .btn-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+  .icon {
+    font-size: 1.6rem;
+    width: 32px;
+    text-align: center;
+  }
+  .name { font-weight: 600; line-height: 1.2; }
+  .sub { display: block; font-size: 0.78rem; color: #cfe2f5; margin-top: 2px; }
+  .number {
+    background: #fff;
+    color: #1E5FA8;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  a.emergency {
+    background: #d32f2f;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 0 22px rgba(211, 47, 47, 0.6);
+  }
+  a.emergency .number {
+    color: #d32f2f;
+    font-size: 1.5rem;
+    padding: 4px 14px;
+  }
+  a.emergency:active { background: #b71c1c; }
+
+  #installBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+    display: none;
+    z-index: 999;
+    animation: pulse 1.8s infinite;
+    white-space: nowrap;
+  }
+  #installBtn:active { transform: translateX(-50%) scale(0.95); }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6); }
+    50% { box-shadow: 0 6px 32px rgba(211, 47, 47, 1); }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Iglesia S.O.S</h1>
+  <p class="subtitle">Hospital Dr. Tomás Perón · San Juan</p>
+  <img src="icon-512.png" alt="Iglesia S.O.S" class="logo">
+
+  <div class="buttons">
+
+    <a class="call-btn" href="tel:2647493045">
+      <div class="btn-left">
+        <span class="icon">🏥</span>
+        <span class="name">Hospital Dr. Tomás Perón</span>
+      </div>
+      <span class="number">2647 493-045</span>
+    </a>
+
+    <a class="call-btn" href="tel:2644824565">
+      <div class="btn-left">
+        <span class="icon">🚑</span>
+        <span class="name">Urgencias y Emergencias<span class="sub">24 hs</span></span>
+      </div>
+      <span class="number">264 482-4565</span>
+    </a>
+
+    <a class="call-btn" href="tel:2647497070">
+      <div class="btn-left">
+        <span class="icon">🚒</span>
+        <span class="name">Bomberos Las Flores</span>
+      </div>
+      <span class="number">2647 497-070</span>
+    </a>
+
+    <a class="call-btn" href="tel:2647493060">
+      <div class="btn-left">
+        <span class="icon">👮</span>
+        <span class="name">Comisaría 22 Rodeo</span>
+      </div>
+      <span class="number">2647 493-060</span>
+    </a>
+
+    <a class="call-btn" href="tel:2644827132">
+      <div class="btn-left">
+        <span class="icon">🛟</span>
+        <span class="name">Protección Civil</span>
+      </div>
+      <span class="number">264 482-7132</span>
+    </a>
+
+    <a class="call-btn" href="tel:2646617907">
+      <div class="btn-left">
+        <span class="icon">⛵</span>
+        <span class="name">Seguridad Náutica</span>
+      </div>
+      <span class="number">264 661-7907</span>
+    </a>
+
+    <a class="call-btn emergency" href="tel:911">
+      <div class="btn-left">
+        <span class="icon">🚨</span>
+        <span class="name">LLAMAR AL 911<span class="sub" style="color:#ffd9d6;">Línea directa y gratuita · 24 hs</span></span>
+      </div>
+      <span class="number">911</span>
+    </a>
+
+  </div>
+
+  <button id="installBtn">⬇️ INSTALAR APP</button>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .catch(err => console.log('SW error:', err));
+    });
+  }
+
+  const installBtn = document.getElementById('installBtn');
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+                    || window.navigator.standalone === true;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  let deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!isStandalone) installBtn.style.display = 'block';
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (isIOS) {
+      alert('Para instalar en iPhone:\n\n1. Toca el botón Compartir (⬆️)\n2. Elige "Añadir a pantalla de inicio"\n3. Confirma con "Añadir"');
+      return;
+    }
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') installBtn.style.display = 'none';
+    deferredPrompt = null;
+  });
+
+  window.addEventListener('appinstalled', () => {
+    installBtn.style.display = 'none';
+  });
+
+  if (isIOS && !isStandalone) {
+    installBtn.style.display = 'block';
+  }
+</script>
+</body>
+</html>
